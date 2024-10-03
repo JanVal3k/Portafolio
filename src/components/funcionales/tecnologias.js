@@ -49,6 +49,11 @@ export default function Tecnoligias({ id }) {
             <FontAwesomeIcon icon={faReact} />
           </span>
         </li>
+        <li>
+          <span className={styles.contactIcon2}>
+            <img src="/images/logos/Tailwind.svg" alt="Tailwind CSS" />
+          </span>
+        </li>
       </ul>
 
       <h2>SOFTWARES</h2>
@@ -63,13 +68,14 @@ export default function Tecnoligias({ id }) {
 
       <ul>
         <li>
-          primer punto de aprendizaje <a>el link</a>
-        </li>
-        <li>
-          segundo punto de aprendizaje <a>el link</a>
-        </li>
-        <li>
-          tercero punto de aprendizaje <a>el link</a>
+          Perfil de{" "}
+          <a
+            href="https://www.codecademy.com/profiles/Hernan_Gomez"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Codecademy
+          </a>
         </li>
       </ul>
     </section>

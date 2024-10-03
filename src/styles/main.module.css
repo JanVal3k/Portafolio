@@ -446,63 +446,11 @@ br{
 /* ===================== */
 /*       Fin Row         */
 /* ===================== */
+
 /* ============================ */
 /*       inicio popover         */
 /* ============================ */
-.galleryContainer {
-  padding: 20px;
-}
-
-/* Mantén tus estilos de row existentes */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  align-items: stretch;
-  margin-top: 0;
-  margin-left: -2.5em;
-}
-
-.row > * {
-  box-sizing: border-box;
-  padding: 0 0 0 2.5em;
-}
-
-/* Mantén el resto de tus estilos de grid existentes */
-.col-6 {
-  width: 50%;
-}
-
-.col-12-xsmall {
-  width: 100%;
-}
-
-/* Estilos para las imágenes en miniatura */
-.workItem {
-  margin-bottom: 2em;
-}
-
-.image.fit {
-  display: block;
-  margin: 0 0 1em 0;
-  width: 100%;
-}
-
-.thumb {
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-
-.thumb:hover {
-  opacity: 0.8;
-}
-
-.thumb img {
-  width: 100%;
-  height: auto;
-}
-
-/* Estilos para el popover */
+/* Añade estos estilos a tu archivo CSS existente */
 .popoverOverlay {
   position: fixed;
   top: 0;
@@ -538,13 +486,14 @@ br{
   cursor: pointer;
 }
 
-/* Mantén el resto de tus clases de utilidad existentes */
-.gtr-50 {
-  margin-left: -1.25em;
+/* Si no lo tienes ya, agrega esto para hacer las miniaturas clickeables */
+.thumb {
+  cursor: pointer;
+  transition: opacity 0.3s;
 }
 
-.gtr-50 > * {
-  padding: 0 0 0 1.25em;
+.thumb:hover {
+  opacity: 0.8;
 }
 /* ============================ */
 /*       fin popover         */
@@ -715,6 +664,11 @@ br{
 .contactIcon2 {
   font-size: 2em;
   color: #5cc6a7;
+}
+.contactIcon2 img {
+  width: 1em;  /* o el tamaño que necesites */
+  height: 1em; /* o el tamaño que necesites */
+  filter: invert(69%) sepia(74%) saturate(349%) hue-rotate(121deg) brightness(91%) contrast(89%);
 }
 
 @media screen and (max-width: 480px) {

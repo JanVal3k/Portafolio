@@ -30,100 +30,85 @@ export default function SectionPortafolio({ id }) {
   ];
   return (
     <section id={id} className={styles.mainSection}>
-      <div className="gallery-container">
-        <h2>Cuadros</h2>
-        <div className="image-grid">
-          {imagenes.map((image, index) => (
-            <article key={index} className="image-item">
-              <div
-                className="image-thumb"
-                onClick={() => setSelectedImage(image)}
-              >
-                <img src={image.thumb} alt={image.title} />
-              </div>
-              <h3>{image.title}</h3>
-              <p>{image.description}</p>
-            </article>
-          ))}
-        </div>
-
-        {selectedImage && (
+      <h2>Cuadros</h2>
+      <div className={`${styles.row} ${styles["gtr-50"]}`}>
+        <article
+          className={`${styles["col-6"]} ${styles["col-12-xsmall"]} ${styles["work-item"]}`}
+        >
           <div
-            className="popover-overlay"
-            onClick={() => setSelectedImage(null)}
+            onClick={() => setSelectedImage("/images/fulls/01.jpg")}
+            className={`${styles.image} ${styles.fit} ${styles.thumb}`}
           >
-            <div
-              className="popover-content"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                className="close-button"
-                onClick={() => setSelectedImage(null)}
-              >
-                ×
-              </button>
-              <img src={selectedImage.full} alt={selectedImage.title} />
-            </div>
+            <img src="/images/thumbs/01.jpg" alt="" />
           </div>
-        )}
-
-        <style jsx>{`
-          .gallery-container {
-            padding: 20px;
-          }
-          .image-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-          }
-          .image-item {
-            flex: 1 1 calc(50% - 10px);
-            min-width: 250px;
-          }
-          .image-thumb {
-            cursor: pointer;
-            transition: opacity 0.3s;
-          }
-          .image-thumb:hover {
-            opacity: 0.8;
-          }
-          .image-thumb img {
-            width: 100%;
-            height: auto;
-          }
-          .popover-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-          }
-          .popover-content {
-            position: relative;
-            max-width: 90%;
-            max-height: 90%;
-          }
-          .popover-content img {
-            max-width: 100%;
-            max-height: 90vh;
-          }
-          .close-button {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 30px;
-            cursor: pointer;
-          }
-        `}</style>
+          <h3>Cuadro numero 1</h3>
+          <p>Descripcion del cudaro N.1</p>
+        </article>
+        <article
+          className={`${styles["col-6"]} ${styles["col-12-xsmall"]} ${styles["work-item"]}`}
+        >
+          <div
+            onClick={() => setSelectedImage("/images/fulls/02.jpg")}
+            className={`${styles.image} ${styles.fit} ${styles.thumb}`}
+          >
+            <img src="/images/thumbs/02.jpg" alt="" />
+          </div>
+          <h3>Cuadro numero 2</h3>
+          <p>Descripcion del cudaro N.2</p>
+        </article>
+        <article
+          className={`${styles["col-6"]} ${styles["col-12-xsmall"]} ${styles["work-item"]}`}
+        >
+          <div
+            onClick={() => setSelectedImage("/images/fulls/03.jpg")}
+            className={`${styles.image} ${styles.fit} ${styles.thumb}`}
+          >
+            <img src="/images/thumbs/03.jpg" alt="" />
+          </div>
+          <h3>Cuadro numero 3</h3>
+          <p>Descripcion del cudaro N.3</p>
+        </article>
+        <article
+          className={`${styles["col-6"]} ${styles["col-12-xsmall"]} ${styles["work-item"]}`}
+        >
+          <div
+            onClick={() => setSelectedImage("/images/fulls/04.jpg")}
+            className={`${styles.image} ${styles.fit} ${styles.thumb}`}
+          >
+            <img src="/images/thumbs/04.jpg" alt="" />
+          </div>
+          <h3>Cuadro numero 4</h3>
+          <p>Descripcion del cudaro N.4</p>
+        </article>
       </div>
+
+      {selectedImage && (
+        <div
+          className={styles.popoverOverlay}
+          onClick={() => setSelectedImage(null)}
+        >
+          <div
+            className={styles.popoverContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className={styles.closeButton}
+              onClick={() => setSelectedImage(null)}
+            >
+              ×
+            </button>
+            <img src={selectedImage} alt="" />
+          </div>
+        </div>
+      )}
+
+      <ul className={styles.actions}>
+        <li>
+          <a href="#" className={styles.button}>
+            Portfolio completo
+          </a>
+        </li>
+      </ul>
     </section>
   );
 }
