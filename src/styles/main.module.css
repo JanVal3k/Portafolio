@@ -446,6 +446,109 @@ br{
 /* ===================== */
 /*       Fin Row         */
 /* ===================== */
+/* ============================ */
+/*       inicio popover         */
+/* ============================ */
+.galleryContainer {
+  padding: 20px;
+}
+
+/* Mantén tus estilos de row existentes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: stretch;
+  margin-top: 0;
+  margin-left: -2.5em;
+}
+
+.row > * {
+  box-sizing: border-box;
+  padding: 0 0 0 2.5em;
+}
+
+/* Mantén el resto de tus estilos de grid existentes */
+.col-6 {
+  width: 50%;
+}
+
+.col-12-xsmall {
+  width: 100%;
+}
+
+/* Estilos para las imágenes en miniatura */
+.workItem {
+  margin-bottom: 2em;
+}
+
+.image.fit {
+  display: block;
+  margin: 0 0 1em 0;
+  width: 100%;
+}
+
+.thumb {
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.thumb:hover {
+  opacity: 0.8;
+}
+
+.thumb img {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilos para el popover */
+.popoverOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popoverContent {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.popoverContent img {
+  max-width: 100%;
+  max-height: 90vh;
+}
+
+.closeButton {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Mantén el resto de tus clases de utilidad existentes */
+.gtr-50 {
+  margin-left: -1.25em;
+}
+
+.gtr-50 > * {
+  padding: 0 0 0 1.25em;
+}
+/* ============================ */
+/*       fin popover         */
+/* ============================ */
 /* INCIO Bonotones*/
 	input[type="submit"],
 	input[type="reset"],

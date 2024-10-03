@@ -28,8 +28,13 @@ export default function SobreMi({ id }) {
       <br />
       <h3>
         Te dejo mi <strong>linkedIn</strong> para que veas mas afondo mi
-        esperiencia laboral. {"  "}
-        <a className={styles.contactIcon}>
+        experiencia laboral. {"  "}
+        <a
+          className={styles.contactIcon}
+          href="https://www.linkedin.com/in/hernan-dario-gomez-marquez-b12958203/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </h3>
