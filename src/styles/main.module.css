@@ -91,6 +91,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
 h1 {
+  color: #F5766E;
   font-size: 2em;
   line-height: 1.5em;
   text-decoration: none;
@@ -100,7 +101,7 @@ h1 {
   -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  color: #49bf9d;
+  color: #49a3bf;
   text-decoration: none;
   cursor: pointer;
 }
@@ -112,7 +113,7 @@ h1 {
     color: #184e68;
   }
 h2 {
-  font-size: 1.5em;
+  font-size: 1.4em;
   line-height: 1.5em;
 }
 
@@ -859,5 +860,4 @@ br{
 .footer .copyright li a {
   color: inherit;
 }
-/*FINAL ICONS*/
 

@@ -3,9 +3,9 @@ import Descargas from "react-file-download";
 import styles from "../../styles/main.module.css";
 
 export default function ParaBotonDescarga() {
-  const [isLoading, setIsLoading] = useState(false); // para manejar el estado de la carga
-  const [error, setError] = useState(null); // para manejar el estado del error
-
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+  //-------------------------------------------
   const DescargarArchivo = () => {
     setIsLoading(true);
     try {
