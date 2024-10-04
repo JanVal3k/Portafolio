@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../styles/main.module.css";
-import ParaDescargar from "../clases/paraDescargar";
+import VisorDePDF from "../funcionales/popoverPDF";
 export default function Educacion({ id }) {
   return (
     <section
@@ -26,10 +26,11 @@ export default function Educacion({ id }) {
             >
               -Desarrolo web front-end, manejo de base de datos,
               <br />y aplicaciones de escritorio con C# (.net).
+              <h6>Periodo: 2014 - 2016</h6>
             </h3>
           </li>
           <li>
-            <ParaDescargar />
+            <VisorDePDF />
           </li>
         </ul>
       </div>

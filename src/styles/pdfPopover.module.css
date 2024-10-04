@@ -1,0 +1,85 @@
+.container {
+    position: relative;
+  }
+  
+  .openButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .openButton:hover {
+    background-color: #2563eb;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popover {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    width: 90%;
+    height: 90%;
+    position: relative;
+    overflow: auto;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    color: #6b7280;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .closeButton:hover {
+    color: #374151;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  
+  .navButton {
+    margin: 0 8px;
+    padding: 8px 16px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .navButton:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+  }
+  
+  .pageInfo {
+    margin: 0 8px;
+    padding: 8px 0;
+  }

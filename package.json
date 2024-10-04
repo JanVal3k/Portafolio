@@ -10,9 +10,12 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "lucide-react": "^0.447.0",
+    "pdfjs-dist": "^4.6.82",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-file-download": "^0.3.5",
+    "react-pdf": "^9.1.1",
     "react-scripts": "5.0.1",
     "sass": "^1.77.8",
     "web-vitals": "^2.1.4"
