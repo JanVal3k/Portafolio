@@ -66,7 +66,7 @@ export default function Tecnoligias({ id }) {
       </div>
       <h3>EN PROCESO DE APRENDISAJE</h3>
 
-      <ul>
+      <ul className={styles.contactActions}>
         <li>
           Perfil de{" "}
           <a

@@ -39,6 +39,7 @@ export default function Header({ setScroll }) {
         <a onClick={handleClick("contacto")}>
           <b>CONTACTO</b>
         </a>
+        <br />
       </div>
     </header>
   );
