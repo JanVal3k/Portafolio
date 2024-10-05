@@ -646,9 +646,11 @@ br{
 }
 
 .cvButton {
-  display: inline-block;
+  display: inline-flex;
   padding: 0.5em 1em;
   text-decoration: none;
+  align-items: center;
+  justify-content: center;
   background-color: #e7e6e672;
   color: #5cc6a7;
   border-radius: 6px;

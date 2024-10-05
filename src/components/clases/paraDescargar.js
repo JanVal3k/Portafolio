@@ -1,30 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Descargas from "react-file-download";
 import styles from "../../styles/main.module.css";
 
-export default function ParaBotonDescarga() {
+export default function ParaBotonDescarga({
+  rutaArchivo,
+  nombreDescarga = "archivo.pdf",
+  textoBoton = "Descargar archivo",
+  textoDescargando = "Descargando...",
+}) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  //-------------------------------------------
+
   const DescargarArchivo = () => {
     setIsLoading(true);
+    setError(null);
+
     try {
-      Descargas(
-        "../../../Descargas/Pago_internet.pdf",
-        "CvHernanDarioGomez.pdf"
-      );
-      setIsLoading(false);
+      Descargas(rutaArchivo, nombreDescarga);
     } catch (err) {
       setError(err.message);
+    } finally {
       setIsLoading(false);
     }
   };
-
-  useEffect(() => {
-    return () => {
-      setError(null);
-    };
-  }, []);
 
   return (
     <>
@@ -33,7 +31,7 @@ export default function ParaBotonDescarga() {
         onClick={DescargarArchivo}
         disabled={isLoading}
       >
-        {isLoading ? "Descargando..." : "Descargar CV"}
+        {isLoading ? textoDescargando : textoBoton}
       </a>
       {error && <div>Error al descargar el archivo: {error}</div>}
     </>

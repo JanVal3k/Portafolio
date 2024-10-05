@@ -1,5 +1,10 @@
 .container {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    height: 30px;
+    
   }
   
   .openButton {
