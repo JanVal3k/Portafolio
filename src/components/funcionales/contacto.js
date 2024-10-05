@@ -1,6 +1,10 @@
 import React from "react";
 import styles from "../../styles/main.module.css";
-import { faWhatsapp, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faWhatsapp,
+  faLinkedin,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -49,6 +53,19 @@ export default function Educacion({ id }) {
             rel="noopener noreferrer"
           >
             +57 - 310 86 57 315
+          </a>
+        </li>
+        <li>
+          <FontAwesomeIcon icon={faGithub} />
+          {"  "}
+          Github:
+          {"  "}
+          <a
+            href="https://github.com/JanVal3k"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            /JanVal3k
           </a>
         </li>
       </ul>
