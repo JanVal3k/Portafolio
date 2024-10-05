@@ -6,6 +6,7 @@ import ParaDescargar from "../clases/paraDescargar";
 import styles from "../../styles/main.module.css";
 
 export default function SeccionTop({ id }) {
+  const pdfUrl = process.env.PUBLIC_URL + "/Diploma_SENA.pdf";
   return (
     <section
       id={id}
@@ -32,7 +33,12 @@ export default function SeccionTop({ id }) {
       <div className={styles.innerContact}>
         <ul className={styles.contactActions}>
           <li>
-            <ParaDescargar />
+            <ParaDescargar
+              rutaArchivo={pdfUrl}
+              nombreDescarga="CvHernanDarioGomez.pdf"
+              textoBoton="Descargar CV"
+              textoDescargando="Descargando..."
+            />
           </li>
         </ul>
         <ul className={styles.contactIcons}>
