@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Descargas from "react-file-download";
+import axios from "axios";
 import styles from "../../styles/main.module.css";
 
 export default function ParaBotonDescarga({
@@ -11,14 +11,25 @@ export default function ParaBotonDescarga({
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const DescargarArchivo = () => {
+  const descargarArchivo = async () => {
     setIsLoading(true);
     setError(null);
 
     try {
-      Descargas(rutaArchivo, nombreDescarga);
+      const response = await axios.get(rutaArchivo, {
+        responseType: "blob",
+      });
+
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement("a");
+      link.href = url;
+      link.setAttribute("download", nombreDescarga);
+      document.body.appendChild(link);
+      link.click();
+      link.parentNode.removeChild(link);
     } catch (err) {
-      setError(err.message);
+      console.error("Error al descargar el archivo:", err);
+      setError(`Error al descargar el archivo: ${err.message}`);
     } finally {
       setIsLoading(false);
     }
@@ -26,14 +37,14 @@ export default function ParaBotonDescarga({
 
   return (
     <>
-      <a
+      <button
         className={styles.cvButton}
-        onClick={DescargarArchivo}
+        onClick={descargarArchivo}
         disabled={isLoading}
       >
         {isLoading ? textoDescargando : textoBoton}
-      </a>
-      {error && <div>Error al descargar el archivo: {error}</div>}
+      </button>
+      {error && <div className={styles.errorMessage}>{error}</div>}
     </>
   );
 }
