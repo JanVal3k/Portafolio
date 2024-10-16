@@ -1,114 +1,129 @@
+// sectionPortafolio.js
 import React, { useState } from "react";
 import styles from "../../styles/main.module.css";
-export default function SectionPortafolio({ id }) {
-  const [selectedImage, setSelectedImage] = useState(null);
-  const imagenes = [
+import styles2 from "../../styles/portafolio.module.css";
+
+const BrowserChrome = () => (
+  <div className={styles2.browserChrome}>
+    <div className={styles2.browserButtons}>
+      <div className={`${styles2.browserButton} ${styles2.buttonRed}`} />
+      <div className={`${styles2.browserButton} ${styles2.buttonYellow}`} />
+      <div className={`${styles2.browserButton} ${styles2.buttonGreen}`} />
+    </div>
+  </div>
+);
+
+const ProjectPreview = ({ project, onClose }) => (
+  <div className={styles2.previewContainer}>
+    <BrowserChrome />
+    <div className={styles2.previewContent}>
+      <button className={styles2.closeButton} onClick={onClose}>
+        ×
+      </button>
+      <img
+        src={project.imageUrl}
+        alt={project.title}
+        className={styles2.previewImage}
+      />
+      <div className={styles2.previewOverlay}>
+        <h3 className={styles2.previewTitle}>{project.title}</h3>
+        <p className={styles2.previewDescription}>{project.description}</p>
+        <a
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles2.previewButton}
+        >
+          Ver Proyecto Completo
+        </a>
+      </div>
+    </div>
+  </div>
+);
+
+const SectionPortafolio = ({ id }) => {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const projects = [
     {
-      thumb: "images/thumbs/01.jpg",
-      full: "images/fulls/01.jpg",
-      titulo: "Proyecto 1",
-      descipcion: "imagene del Poryecto N.1",
+      id: 1,
+      thumb: "/images/thumbs/01.jpg",
+      imageUrl: "/images/fulls/01.jpg",
+      title: "E-commerce Website",
+      description:
+        "Una tienda en línea moderna construida con React y Next.js, integrada con un sistema de gestión de contenidos personalizado.",
+      url: "https://ejemplo1.com",
     },
     {
-      thumb: "images/thumbs/02.jpg",
-      full: "images/fulls/02.jpg",
-      titulo: "Proyecto 2",
-      descipcion: "imagene del Poryecto N.2",
+      id: 2,
+      thumb: "/images/thumbs/02.jpg",
+      imageUrl: "/images/fulls/02.jpg",
+      title: "Dashboard Analytics",
+      description:
+        "Panel de control interactivo para visualización de datos empresariales en tiempo real.",
+      url: "https://ejemplo2.com",
     },
     {
-      thumb: "images/thumbs/03.jpg",
-      full: "images/fulls/03.jpg",
-      titulo: "Proyecto 3",
-      descipcion: "imagene del Poryecto N.3",
+      id: 3,
+      thumb: "/images/thumbs/03.jpg",
+      imageUrl: "/images/fulls/03.jpg",
+      title: "Blog Platform",
+      description:
+        "Plataforma de blog con sistema de gestión de contenidos y editor WYSIWYG.",
+      url: "https://ejemplo3.com",
     },
     {
-      thumb: "images/thumbs/04.jpg",
-      full: "images/fulls/04.jpg",
-      titulo: "Proyecto 4",
-      descipcion: "imagene del Poryecto N.5",
+      id: 4,
+      thumb: "/images/thumbs/04.jpg",
+      imageUrl: "/images/fulls/04.jpg",
+      title: "Portfolio Template",
+      description:
+        "Plantilla de portfolio personalizable para desarrolladores y diseñadores.",
+      url: "https://ejemplo4.com",
     },
   ];
+
   return (
     <section id={id} className={styles.mainSection}>
-      <h2>Cuadros</h2>
-      <div className={`${styles.row} ${styles["gtr-50"]}`}>
-        <article
-          className={`${styles["col-6"]} ${styles["col-12-xsmall"]} ${styles["work-item"]}`}
-        >
-          <div
-            onClick={() => setSelectedImage("/images/fulls/01.jpg")}
-            className={`${styles.image} ${styles.fit} ${styles.thumb}`}
+      <h2 className={styles2.title}>Proyectos</h2>
+
+      <div className={styles2.grid}>
+        {projects.map((project) => (
+          <article
+            key={project.id}
+            className={styles2.card}
+            onClick={() => setSelectedProject(project)}
           >
-            <img src="/images/thumbs/01.jpg" alt="" />
-          </div>
-          <h3>Cuadro numero 1</h3>
-          <p>Descripcion del cudaro N.1</p>
-        </article>
-        <article
-          className={`${styles["col-6"]} ${styles["col-12-xsmall"]} ${styles["work-item"]}`}
-        >
-          <div
-            onClick={() => setSelectedImage("/images/fulls/02.jpg")}
-            className={`${styles.image} ${styles.fit} ${styles.thumb}`}
-          >
-            <img src="/images/thumbs/02.jpg" alt="" />
-          </div>
-          <h3>Cuadro numero 2</h3>
-          <p>Descripcion del cudaro N.2</p>
-        </article>
-        <article
-          className={`${styles["col-6"]} ${styles["col-12-xsmall"]} ${styles["work-item"]}`}
-        >
-          <div
-            onClick={() => setSelectedImage("/images/fulls/03.jpg")}
-            className={`${styles.image} ${styles.fit} ${styles.thumb}`}
-          >
-            <img src="/images/thumbs/03.jpg" alt="" />
-          </div>
-          <h3>Cuadro numero 3</h3>
-          <p>Descripcion del cudaro N.3</p>
-        </article>
-        <article
-          className={`${styles["col-6"]} ${styles["col-12-xsmall"]} ${styles["work-item"]}`}
-        >
-          <div
-            onClick={() => setSelectedImage("/images/fulls/04.jpg")}
-            className={`${styles.image} ${styles.fit} ${styles.thumb}`}
-          >
-            <img src="/images/thumbs/04.jpg" alt="" />
-          </div>
-          <h3>Cuadro numero 4</h3>
-          <p>Descripcion del cudaro N.4</p>
-        </article>
+            <div className={styles2.imageContainer}>
+              <img
+                src={project.thumb}
+                alt={project.title}
+                className={styles2.thumbnail}
+              />
+            </div>
+            <div className={styles2.cardContent}>
+              <h3 className={styles2.cardTitle}>{project.title}</h3>
+              <p className={styles2.cardDescription}>{project.description}</p>
+            </div>
+          </article>
+        ))}
       </div>
 
-      {selectedImage && (
-        <div
-          className={styles.popoverOverlay}
-          onClick={() => setSelectedImage(null)}
-        >
+      {selectedProject && (
+        <div className={styles2.modal} onClick={() => setSelectedProject(null)}>
           <div
-            className={styles.popoverContent}
+            className={styles2.modalContent}
             onClick={(e) => e.stopPropagation()}
           >
-            <button
-              className={styles.closeButton}
-              onClick={() => setSelectedImage(null)}
-            >
-              ×
-            </button>
-            <img src={selectedImage} alt="" />
+            <ProjectPreview
+              project={selectedProject}
+              onClose={() => setSelectedProject(null)}
+            />
           </div>
         </div>
       )}
-
-      <ul className={styles.actions}>
-        <li>
-          <a href="#" className={styles.button}>
-            Portfolio completo
-          </a>
-        </li>
-      </ul>
     </section>
   );
-}
+};
+
+export default SectionPortafolio;
