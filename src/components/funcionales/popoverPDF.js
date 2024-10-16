@@ -3,7 +3,6 @@ import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import styles2 from "../../styles/pdfPopover.module.css";
-import ParaBotonDescarga from "../clases/paraDescargar";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
@@ -24,14 +23,8 @@ const VisorDePDF = () => {
         onClick={() => setAbierto(!abierto)}
         className={styles2.openButton}
       >
-        Ver PDF
+        Ver certificado.
       </button>
-      <ParaBotonDescarga
-        rutaArchivo={pdfUrl}
-        nombreDescarga="CvHernanDarioGomez.pdf"
-        textoBoton="Descargar"
-        textoDescargando="Descargando..."
-      />
 
       {abierto && (
         <div className={styles2.overlay}>

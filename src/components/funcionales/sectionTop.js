@@ -6,7 +6,7 @@ import ParaDescargar from "../clases/paraDescargar";
 import styles from "../../styles/main.module.css";
 
 export default function SeccionTop({ id }) {
-  const pdfUrl = process.env.PUBLIC_URL + "/Diploma_SENA.pdf";
+  const pdfUrl = process.env.PUBLIC_URL + "/CV_Hernán_Darío_Gomez_Marquez.pdf";
   return (
     <section
       id={id}
