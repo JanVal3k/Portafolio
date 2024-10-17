@@ -685,6 +685,20 @@ br{
     margin-top: 1em;
   }
 }
+/*INICIO PARA BOTON GITHUB*/
+.githubLink {
+  position: relative;
+  z-index: 10;       
+  cursor: pointer;   
+  display: inline-block;
+  padding: 5px;       
+  transition: transform 0.2s;
+}
+
+.githubLink:hover {
+  transform: scale(1.1);
+}
+/*FIN PARA BOTON GITHUB*/
 /*INICIO IMAGE*/
 .image {
   border-radius: 0.35em;

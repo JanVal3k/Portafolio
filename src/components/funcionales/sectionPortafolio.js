@@ -1,7 +1,14 @@
-// sectionPortafolio.js
 import React, { useState } from "react";
 import styles from "../../styles/main.module.css";
 import styles2 from "../../styles/portafolio.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHtml5,
+  faJs,
+  faCss3Alt,
+  faReact,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 
 const BrowserChrome = () => (
   <div className={styles2.browserChrome}>
@@ -49,40 +56,133 @@ const SectionPortafolio = ({ id }) => {
       id: 1,
       thumb: "/images/thumbs/01.jpg",
       imageUrl: "/images/fulls/01.jpg",
-      title: "E-commerce Website",
+      title: "Recetas y bebidas",
       description:
-        "Una tienda en línea moderna construida con React y Next.js, integrada con un sistema de gestión de contenidos personalizado.",
+        "Pagina interactiva que muestra y filtra informacion traidas de las APIs The MealDB y  The CocktailDB",
+      description2: (
+        <ul className={styles.contactIcons}>
+          <li>
+            <span className={styles.contactIcon2}>
+              <FontAwesomeIcon icon={faHtml5} />
+            </span>
+          </li>
+          <li>
+            <span className={styles.contactIcon2}>
+              <img src="/images/logos/Tailwind.svg" alt="Tailwind CSS" />
+            </span>
+          </li>
+          <li>
+            <span className={styles.contactIcon2}>
+              <FontAwesomeIcon icon={faJs} />
+            </span>
+          </li>
+          <li>
+            <span className={styles.contactIcon2}>
+              <FontAwesomeIcon icon={faReact} />
+            </span>
+          </li>
+        </ul>
+      ),
+      girhubUrl: "https://github.com/JanVal3k/Biblioteca-Comidas-y-Bebidas",
       url: "https://ejemplo1.com",
     },
     {
       id: 2,
       thumb: "/images/thumbs/02.jpg",
       imageUrl: "/images/fulls/02.jpg",
-      title: "Dashboard Analytics",
+      title: "Matatena",
       description:
-        "Panel de control interactivo para visualización de datos empresariales en tiempo real.",
+        "Juego de dados para dos personas en las que se calcula datos con la interaccion de imagenes en un tablero",
+      description2: (
+        <ul className={styles.contactIcons}>
+          <li>
+            <span className={styles.contactIcon2}>
+              <FontAwesomeIcon icon={faHtml5} />
+            </span>
+          </li>
+          <li>
+            <span className={styles.contactIcon2}>
+              <FontAwesomeIcon icon={faCss3Alt} />
+            </span>
+          </li>
+          <li>
+            <span className={styles.contactIcon2}>
+              <FontAwesomeIcon icon={faJs} />
+            </span>
+          </li>
+          <li>
+            <span className={styles.contactIcon2}>
+              <FontAwesomeIcon icon={faReact} />
+            </span>
+          </li>
+        </ul>
+      ),
+      girhubUrl: "https://github.com/JanVal3k/Matatena",
       url: "https://ejemplo2.com",
     },
     {
       id: 3,
       thumb: "/images/thumbs/03.jpg",
       imageUrl: "/images/fulls/03.jpg",
-      title: "Blog Platform",
+      title: "Burbuja de notas",
       description:
-        "Plataforma de blog con sistema de gestión de contenidos y editor WYSIWYG.",
+        "widget flotante para pc donde se podra crear borrar modificar notas rapidas eventos en calendarios y alarmas ademas de otras funciones a futuro",
+      description2: (
+        <ul className={styles.contactIcons}>
+          <li>
+            <span className={styles.contactIcon2}>
+              <img src="/images/logos/Csharp.svg" alt="C-sharp" />
+            </span>
+          </li>
+          <li>
+            <span className={styles.contactIcon2}>
+              <img src="/images/logos/VSLogo.svg" alt="VisualStudio" />
+            </span>
+          </li>
+        </ul>
+      ),
+      girhubUrl: "https://github.com/JanVal3k/Bubuja-De-Notas",
       url: "https://ejemplo3.com",
     },
     {
       id: 4,
       thumb: "/images/thumbs/04.jpg",
       imageUrl: "/images/fulls/04.jpg",
-      title: "Portfolio Template",
+      title: "Portfolio",
       description:
-        "Plantilla de portfolio personalizable para desarrolladores y diseñadores.",
+        "Este portafiolo tambien es un proyecto para demotrar las habilidades y el manejo de las tenologias aprendidas",
+      description2: (
+        <ul className={styles.contactIcons}>
+          <li>
+            <span className={styles.contactIcon2}>
+              <FontAwesomeIcon icon={faHtml5} />
+            </span>
+          </li>
+          <li>
+            <span className={styles.contactIcon2}>
+              <FontAwesomeIcon icon={faCss3Alt} />
+            </span>
+          </li>
+          <li>
+            <span className={styles.contactIcon2}>
+              <FontAwesomeIcon icon={faJs} />
+            </span>
+          </li>
+          <li>
+            <span className={styles.contactIcon2}>
+              <FontAwesomeIcon icon={faReact} />
+            </span>
+          </li>
+        </ul>
+      ),
+      girhubUrl: "https://github.com/JanVal3k/Portafolio",
       url: "https://ejemplo4.com",
     },
   ];
-
+  const handleGithubClick = (e, url) => {
+    e.stopPropagation();
+    window.open(url, "_blank");
+  };
   return (
     <section id={id} className={styles.mainSection}>
       <h2 className={styles2.title}>Proyectos</h2>
@@ -103,7 +203,21 @@ const SectionPortafolio = ({ id }) => {
             </div>
             <div className={styles2.cardContent}>
               <h3 className={styles2.cardTitle}>{project.title}</h3>
-              <p className={styles2.cardDescription}>{project.description}</p>
+              <p className={styles2.cardDescription}>
+                Este Proyecto esta realizado con: {project.description2}
+              </p>
+              <p className={styles2.cardDescription}>
+                Codigo fuente en:{" "}
+                <a
+                  href={project.girhubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${styles.contactIcon2} ${styles.githubLink}`}
+                  onClick={(e) => handleGithubClick(e, project.girhubUrl)}
+                >
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+              </p>
             </div>
           </article>
         ))}
