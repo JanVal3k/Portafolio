@@ -36,7 +36,7 @@ export default function Tecnoligias({ id }) {
         </li>
         <li>
           <span className={styles.contactIcon2}>
-            <FontAwesomeIcon icon={faPhp} />
+            <img src="/images/logos/Csharp.svg" alt="Csharp" />
           </span>
         </li>
       </ul>

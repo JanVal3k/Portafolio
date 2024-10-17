@@ -25,7 +25,7 @@ export default function Educacion({ id }) {
               }}
             >
               -Desarrolo web front-end, manejo de base de datos,
-              <br />y aplicaciones de escritorio con C# (.net).
+              <br />y aplicaciones de escritorio con C# en (.net).
               <h6>Periodo: 2014 - 2016</h6>
             </h3>
           </li>
