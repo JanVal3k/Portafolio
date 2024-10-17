@@ -84,7 +84,7 @@ const SectionPortafolio = ({ id }) => {
         </ul>
       ),
       girhubUrl: "https://github.com/JanVal3k/Biblioteca-Comidas-y-Bebidas",
-      url: "https://ejemplo1.com",
+      url: "https://github.com/JanVal3k/Biblioteca-Comidas-y-Bebidas",
     },
     {
       id: 2,
