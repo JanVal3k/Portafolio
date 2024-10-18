@@ -23,6 +23,8 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.2s;
+    border: solid rgba(42, 42, 42, 0.141) 2px;
+    margin: 4px;
   }
   
   .card:hover {
@@ -41,6 +43,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.165);
   }
   
   .cardContent {
