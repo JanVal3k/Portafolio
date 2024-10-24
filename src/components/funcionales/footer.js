@@ -8,8 +8,15 @@ import {
 import React from "react";
 import styles from "../../styles/main.module.css";
 import stylesOscuro from "../../styles/modoOscuro.module.css";
+import { useTheme } from "../clases/verificarContexto";
 
 export default function Footer() {
+  // estado para el tema
+  const { isDarkMode, toggleTheme } = useTheme();
+  // cambio de tema
+  const handleThemeChange = (e) => {
+    toggleTheme();
+  };
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
@@ -39,6 +46,8 @@ export default function Footer() {
                 type="checkbox"
                 id="themeCheckbox"
                 className={stylesOscuro["themeCheckbox"]}
+                checked={isDarkMode}
+                onChange={handleThemeChange}
               />
               <label htmlFor="themeCheckbox">
                 <div></div>

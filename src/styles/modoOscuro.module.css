@@ -69,4 +69,25 @@
   .themeCheckbox + label span:last-of-type {
     color: #cecece;
   }
+  /*INICO ESTILOS PARA EL CAMBIO DE MODO*/
+  .themeToggle {
+    background: transparent;
+    border: 1px solid var(--text-primary);
+    border-radius: 0.35em;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0.5em 1em;
+    transition: all 0.2s ease-in-out;
+  }
   
+  .themeToggle:hover {
+    background: var(--text-hover);
+    color: var(--heading-color);
+    border-color: var(--text-hover);
+  }
+  
+  [data-theme="dark"] .themeToggle {
+    border-color: var(--text-strong);
+    color: var(--text-strong);
+  }
+  /*FINAL ESTILOS PARA EL CAMBIO DE MODO*/
