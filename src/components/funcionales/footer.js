@@ -23,10 +23,7 @@ export default function Footer() {
         <ul className={styles.copyright}>
           <li>&copy; Derechos</li>
           <li>
-            Diseñador:{" "}
-            <strong style={{ color: "#F5766E" }}>
-              Hernan Dario Gomez Marquez
-            </strong>
+            Diseñador: <strong>Hernan Dario Gomez Marquez</strong>
           </li>
         </ul>
         <ul className={styles.copyright}>

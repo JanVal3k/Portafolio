@@ -9,7 +9,7 @@ export default function SobreMi({ id }) {
       id={id}
       className={`${styles.mainSection} ${styles.centrarContenido}`}
     >
-      <h1 style={{ color: "#F5766E" }}>SOBRE MI</h1>
+      <h1>SOBRE MI</h1>
       <h3>
         Inicie mi carrera en la programcion com mucho amor, pero la vida me
         llevo por otros caminos lavorales,
@@ -21,10 +21,12 @@ export default function SobreMi({ id }) {
         <br />
       </h3>
       <br />
-      <h3 style={{ color: "#F5766E" }}>
-        Actualmente me encuentro estudiando y avansando en el desarrollo de mi
-        programacion.
-      </h3>
+      <strong>
+        <h3>
+          Actualmente me encuentro estudiando y avansando en el desarrollo de mi
+          programacion.
+        </h3>
+      </strong>
       <br />
       <h3>
         Te dejo mi <strong>linkedIn</strong> para que veas mas afondo mi

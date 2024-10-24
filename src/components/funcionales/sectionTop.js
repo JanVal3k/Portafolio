@@ -17,13 +17,15 @@ export default function SeccionTop({ id }) {
           Hola mi nombre es: <br />
         </h4>
         <h1>
-          <strong style={{ color: "#F5766E" }}>Hernan Gomez M.</strong>
+          <strong>Hernan Gomez M.</strong>
         </h1>
       </header>
       <p>Bienvenid@, este es mi portafiolo de desarrollador.</p>
       <h4>
         Si quieres ponerte en contato conmigo puedes escribirme a{" "}
-        <a style={{ color: "#F5766E" }}>dariog_36@hotmail.com</a>
+        <strong>
+          <a>dariog_36@hotmail.com</a>
+        </strong>
       </h4>
       <br />
       <span className={styles.Tecleado}>

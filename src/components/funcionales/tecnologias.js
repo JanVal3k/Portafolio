@@ -15,7 +15,7 @@ export default function Tecnoligias({ id }) {
       className={`${styles.mainSection} ${styles.centrarContenido}`}
     >
       <h1>
-        <strong style={{ color: "#F5766E" }}>TECNOLOGIAS</strong>
+        <strong>TECNOLOGIAS</strong>
       </h1>
       <h2>LENGUAJES DE PROGRAMACION</h2>
       <ul className={styles.contactIcons}>

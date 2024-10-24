@@ -11,7 +11,7 @@
   }
   
   .themeCheckbox + label {
-    /* change the font-size below to change the size of the switch button*/
+    
     font-size: 2rem;
     height: 1em;
     width: 2.5em;
@@ -45,7 +45,6 @@
   }
   
   .themeCheckbox:checked + label div {
-    /* left: calc(2.5em - .8em - .1em); */
     left: 1.6em;
     background-color: #212121;
   }
@@ -63,7 +62,7 @@
   }
   
   .themeCheckbox + label span:first-of-type {
-    color: #3a3a3a;
+    color: #000000;
   }
   
   .themeCheckbox + label span:last-of-type {

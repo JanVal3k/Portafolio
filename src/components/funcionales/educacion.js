@@ -18,12 +18,7 @@ export default function Educacion({ id }) {
               (ADSI) - SENA
             </h2>
 
-            <h3
-              style={{
-                borderBottom: "2px solid rgba(128, 128, 128, 0.5)",
-                paddingBottom: "5px",
-              }}
-            >
+            <h3>
               -Desarrolo web front-end, manejo de base de datos,
               <br />y aplicaciones de escritorio con C# en (.net).
               <h6>Periodo: 2014 - 2016</h6>

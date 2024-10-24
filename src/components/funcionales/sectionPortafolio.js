@@ -185,7 +185,7 @@ const SectionPortafolio = ({ id }) => {
   };
   return (
     <section id={id} className={styles.mainSection}>
-      <h2 className={styles2.title}>Proyectos</h2>
+      <h1 className={styles2.title}>PROYECTOS</h1>
 
       <div className={styles2.grid}>
         {projects.map((project) => (
