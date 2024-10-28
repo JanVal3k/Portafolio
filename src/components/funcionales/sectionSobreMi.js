@@ -20,12 +20,11 @@ export default function SobreMi({ id }) {
         programacion unos años atras.
         <br />
       </h3>
-      <br />
       <strong>
-        <h3>
+        <p>
           Actualmente me encuentro estudiando y avansando en el desarrollo de mi
           programacion.
-        </h3>
+        </p>
       </strong>
       <br />
       <h3>

@@ -84,7 +84,7 @@ const SectionPortafolio = ({ id }) => {
         </ul>
       ),
       girhubUrl: "https://github.com/JanVal3k/Biblioteca-Comidas-y-Bebidas",
-      url: "https://github.com/JanVal3k/Biblioteca-Comidas-y-Bebidas",
+      url: "https://recetasybebidas.netlify.app",
     },
     {
       id: 2,
@@ -118,7 +118,7 @@ const SectionPortafolio = ({ id }) => {
         </ul>
       ),
       girhubUrl: "https://github.com/JanVal3k/Matatena",
-      url: "https://ejemplo2.com",
+      url: "https://matatenagame.netlify.app",
     },
     {
       id: 3,
