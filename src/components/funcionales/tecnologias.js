@@ -14,10 +14,8 @@ export default function Tecnoligias({ id }) {
       id={id}
       className={`${styles.mainSection} ${styles.centrarContenido}`}
     >
-      <h1>
-        <strong>TECNOLOGIAS</strong>
-      </h1>
-      <h2>LENGUAJES DE PROGRAMACION</h2>
+      <h1>TECNOLOGIAS</h1>
+      <p>LENGUAJES DE PROGRAMACION</p>
       <ul className={styles.contactIcons}>
         <li>
           <span className={styles.contactIcon2}>
@@ -41,7 +39,7 @@ export default function Tecnoligias({ id }) {
         </li>
       </ul>
 
-      <h2>LIBRERIAS Y FRAMEWORKS</h2>
+      <p>LIBRERIAS Y FRAMEWORKS</p>
 
       <ul className={styles.contactIcons}>
         <li>
@@ -56,7 +54,7 @@ export default function Tecnoligias({ id }) {
         </li>
       </ul>
 
-      <h2>SOFTWARES</h2>
+      <p>SOFTWARES</p>
       <div className={styles.iconosSoftware}>
         <img src="/images/logos/krita.png" className={styles.imagenTecnolo} />
         <img
@@ -64,20 +62,7 @@ export default function Tecnoligias({ id }) {
           className={styles.imagenTecnolo}
         />
       </div>
-      <h3>EN PROCESO DE APRENDISAJE</h3>
-
-      <ul className={styles.contactActions}>
-        <li>
-          Perfil de{" "}
-          <a
-            href="https://www.codecademy.com/profiles/Hernan_Gomez"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Codecademy
-          </a>
-        </li>
-      </ul>
+      <p>EN PROCESO DE APRENDISAJE</p>
     </section>
   );
 }

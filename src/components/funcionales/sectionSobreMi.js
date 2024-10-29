@@ -10,7 +10,7 @@ export default function SobreMi({ id }) {
       className={`${styles.mainSection} ${styles.centrarContenido}`}
     >
       <h1>SOBRE MI</h1>
-      <h3>
+      <p>
         Inicie mi carrera en la programcion com mucho amor, pero la vida me
         llevo por otros caminos lavorales,
         <br /> durante mi ausencia en la programcion gestione y maneje datos en
@@ -19,7 +19,7 @@ export default function SobreMi({ id }) {
         Hoy en dia estoy deseoso de continuar con aquella pasion que desperto la
         programacion unos años atras.
         <br />
-      </h3>
+      </p>
       <strong>
         <p>
           Actualmente me encuentro estudiando y avansando en el desarrollo de mi
@@ -27,7 +27,7 @@ export default function SobreMi({ id }) {
         </p>
       </strong>
       <br />
-      <h3>
+      <p>
         Te dejo mi <strong>linkedIn</strong> para que veas mas afondo mi
         experiencia laboral. {"  "}
         <a
@@ -38,7 +38,7 @@ export default function SobreMi({ id }) {
         >
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
-      </h3>
+      </p>
     </section>
   );
 }

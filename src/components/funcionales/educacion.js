@@ -13,19 +13,31 @@ export default function Educacion({ id }) {
             <h1>EDUCACION</h1>
           </li>
           <li>
-            <h2>
+            <p>
               TECNOLOGO EN ANALISIS Y DESARROLLO DE SISTEMAS DE INFORMACION
               (ADSI) - SENA
-            </h2>
+            </p>
 
-            <h3>
+            <p>
               -Desarrolo web front-end, manejo de base de datos,
               <br />y aplicaciones de escritorio con C# en (.net).
               <h6>Periodo: 2014 - 2016</h6>
-            </h3>
+            </p>
           </li>
           <li>
             <VisorDePDF />
+          </li>
+        </ul>
+        <ul className={styles.contactActions}>
+          <li>
+            Perfil de{" "}
+            <a
+              href="https://www.codecademy.com/profiles/Hernan_Gomez"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Codecademy
+            </a>
           </li>
         </ul>
       </div>

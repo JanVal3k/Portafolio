@@ -16,9 +16,7 @@ export default function SeccionTop({ id }) {
         <h4>
           Hola mi nombre es: <br />
         </h4>
-        <h1>
-          <strong>Hernan Gomez M.</strong>
-        </h1>
+        <h1>Hernan Gomez M.</h1>
       </header>
       <p>Bienvenid@, este es mi portafiolo de desarrollador.</p>
       <h4>
