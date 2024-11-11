@@ -25,19 +25,24 @@ export default function Educacion({ id }) {
             </p>
           </li>
           <li>
-            <VisorDePDF />
+            <VisorDePDF archivo="SENA" />
           </li>
         </ul>
         <ul className={styles.contactActions}>
           <li>
-            Perfil de{" "}
-            <a
-              href="https://www.codecademy.com/profiles/Hernan_Gomez"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Codecademy
-            </a>
+            <p>
+              Cursos gratuitos completados en:{" "}
+              <a
+                href="https://www.codecademy.com/profiles/Hernan_Gomez"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Codecademy
+              </a>
+            </p>
+            <li>
+              <VisorDePDF archivo="CodeCademy" />
+            </li>
           </li>
         </ul>
       </div>

@@ -6,12 +6,17 @@ import styles2 from "../../styles/pdfPopover.module.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
-const VisorDePDF = () => {
+const VisorDePDF = ({ archivo }) => {
   const [abierto, setAbierto] = useState(false);
   const [paginas, setPaginas] = useState(null);
   const [viendo, setViendo] = useState(1);
 
-  const pdfUrl = process.env.PUBLIC_URL + "/Diploma_SENA.pdf";
+  const rutas = {
+    SENA: "/Diploma_SENA.pdf",
+    CodeCademy: "/CodeCademy.pdf",
+  };
+
+  const pdfUrl = process.env.PUBLIC_URL + (rutas[archivo] || "");
 
   function onCargaDocumento({ numPages }) {
     setPaginas(numPages);
