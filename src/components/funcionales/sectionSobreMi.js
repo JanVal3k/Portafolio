@@ -11,25 +11,34 @@ export default function SobreMi({ id }) {
     >
       <h1>SOBRE MI</h1>
       <p>
-        Inicie mi carrera en la programcion com mucho amor, pero la vida me
-        llevo por otros caminos lavorales,
-        <br /> durante mi ausencia en la programcion gestione y maneje datos en
-        bodegas y logistica de perosonal.
+        Inicie mi carrera en la programación con mucho amor, pero la vida me
+        llevó por otros caminos laborales.
+        <br /> Durante mi ausencia en la programación, gestioné y manejé datos
+        en bodegas y logística de personal.
         <br />
-        Hoy en dia estoy deseoso de continuar con aquella pasion que desperto la
-        programacion unos años atras.
+        Hoy en día estoy deseoso de continuar con aquella pasión que despertó la
+        programación unos años atrás.
         <br />
       </p>
       <strong>
         <p>
-          Actualmente me encuentro estudiando y avansando en el desarrollo de mi
-          programacion.
+          Actualmente me encuentro estudiando y avanzando en el desarrollo de mi
+          programación.
         </p>
       </strong>
       <br />
       <p>
-        Te dejo mi <strong>linkedIn</strong> para que veas mas afondo mi
-        experiencia laboral. {"  "}
+        Te dejo mi{" "}
+        <strong>
+          <a
+            href="https://www.linkedin.com/in/hernan-dario-gomez-marquez-b12958203/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            linkedIn
+          </a>
+        </strong>{" "}
+        para que veas más a fondo mi experiencia laboral. {"  "}
         <a
           className={styles.contactIcon}
           href="https://www.linkedin.com/in/hernan-dario-gomez-marquez-b12958203/"

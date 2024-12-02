@@ -110,9 +110,9 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
-  font-weight: 400;
+  font-weight: 350;
   line-height: 0.5em;
-  margin: 0 0 1em 0;
+  margin: 0 0 0.1em 0;
 }
 
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -674,7 +674,7 @@ br{
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 0.5em; /* Espacio entre los iconos */
+  gap: 0.3em; /* Espacio entre los iconos */
 }
 
 .cvButton {
@@ -699,14 +699,14 @@ br{
   color: var(--color-oscuro);
 }
 .contactIcon2 {
-  font-size: 2em;
+  font-size: 1.8em;
   color: var(--color-claro);
 }
 .contactIcon2 img {
   width: 1em;  /* o el tamaño que necesites */
   height: 1em; /* o el tamaño que necesites */
   filter: invert(69%) sepia(74%) saturate(349%) hue-rotate(121deg) brightness(91%) contrast(89%);
-}
+  }
 
 @media screen and (max-width: 480px) {
   .innerContact {
@@ -715,7 +715,7 @@ br{
 
   .contactActions,
   .contactIcons {
-    margin-top: 1em;
+    margin-top: 0.em;
   }
 }
 /*INICIO PARA BOTON GITHUB*/

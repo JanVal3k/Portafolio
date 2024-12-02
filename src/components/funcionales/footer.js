@@ -21,9 +21,8 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <ul className={styles.copyright}>
-          <li>&copy; Derechos</li>
           <li>
-            Diseñador: <strong>Hernan Dario Gomez Marquez</strong>
+            Diseñado por: <strong>Hernan Dario Gomez Marquez</strong>
           </li>
         </ul>
         <ul className={styles.copyright}>

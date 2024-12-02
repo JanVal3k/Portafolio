@@ -32,11 +32,6 @@ export default function Tecnoligias({ id }) {
             <FontAwesomeIcon icon={faJs} />
           </span>
         </li>
-        <li>
-          <span className={styles.contactIcon2}>
-            <img src="/images/logos/Csharp.svg" alt="Csharp" />
-          </span>
-        </li>
       </ul>
 
       <p>LIBRERIAS Y FRAMEWORKS</p>
