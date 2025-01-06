@@ -124,25 +124,25 @@ const SectionPortafolio = ({ id }) => {
       id: 3,
       thumb: "/images/thumbs/03.jpg",
       imageUrl: "/images/fulls/03.jpg",
-      title: "Burbuja de notas",
+      title: "Notas Movil",
       description:
-        "widget flotante para pc donde se podra crear borrar modificar notas rapidas eventos en calendarios y alarmas ademas de otras funciones a futuro",
+        "Aplicacion de notas y recordatorio para Android que guarda localmente y genera notificaciones.",
       description2: (
         <ul className={styles.contactIcons}>
           <li>
             <span className={styles.contactIcon2}>
-              <img src="/images/logos/Csharp.svg" alt="C-sharp" />
+              <FontAwesomeIcon icon={faJs} />
             </span>
           </li>
           <li>
             <span className={styles.contactIcon2}>
-              <img src="/images/logos/VSLogo.svg" alt="VisualStudio" />
+              <FontAwesomeIcon icon={faReact} />
             </span>
           </li>
         </ul>
       ),
-      girhubUrl: "https://github.com/JanVal3k/Bubuja-De-Notas",
-      url: "https://ejemplo3.com",
+      girhubUrl: "https://github.com/JanVal3k/NotasMovil",
+      url: "https://github.com/JanVal3k/NotasMovil",
     },
     {
       id: 4,
