@@ -126,7 +126,7 @@ const SectionPortafolio = ({ id }) => {
       imageUrl: "/images/fulls/03.jpg",
       title: "Notas Movil",
       description:
-        "Aplicacion de notas y recordatorio para Android que guarda localmente y genera notificaciones.",
+        "Aplicacion de notas y recordatorios para Android. Guarda localmente y genera notificaciones.",
       description2: (
         <ul className={styles.contactIcons}>
           <li>
