@@ -94,6 +94,8 @@
   
   .browserButtons {
     display: flex;
+    flex-direction: row;
+    width: 100%;
     gap: 0.5rem;
   }
   
@@ -102,7 +104,12 @@
     height: 0.75rem;
     border-radius: 50%;
   }
-  
+  .leftButtons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
   .buttonRed { background: #ff5f57; }
   .buttonYellow { background: #ffbd2e; }
   .buttonGreen { background: #28c940; }
@@ -112,24 +119,22 @@
     border-radius: 0.5rem;
     overflow: hidden;
   }
-  
+  .previewDivsDivide{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+  }
   .previewContent {
+    
+    width: 70%;
+    display: flex;
     position: relative;
-    height: 60vh;
     padding: 1rem;
+    background: rgb(203, 203, 203);
   }
-  
-  .previewImage {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    filter: blur(5px);
-    opacity: 0.3;
-  }
-  
   .previewOverlay {
-    position: absolute;
-    inset: 0;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,7 +142,17 @@
     padding: 2rem;
     text-align: center;
   }
-  
+
+  .previewImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  .previewImage:hover {
+    transform: scale(1.02); 
+  }
+    
   .previewTitle {
     font-size: 1.5rem;
     font-weight: bold;
@@ -163,17 +178,17 @@
   .previewButton:hover {
     background: #0060df;
   }
-  
+  .divBtnClose{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
   .closeButton {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
+    background-color: transparent;
     border: none;
     font-size: 2rem;
     cursor: pointer;
     color: #666;
-    z-index: 10;
   }
   
   .closeButton:hover {

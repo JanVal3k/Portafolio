@@ -10,28 +10,35 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
-const BrowserChrome = () => (
+const BrowserChrome = ({ onClose }) => (
   <div className={styles2.browserChrome}>
     <div className={styles2.browserButtons}>
-      <div className={`${styles2.browserButton} ${styles2.buttonRed}`} />
-      <div className={`${styles2.browserButton} ${styles2.buttonYellow}`} />
-      <div className={`${styles2.browserButton} ${styles2.buttonGreen}`} />
+      <div className={styles2.leftButtons}>
+        <div className={`${styles2.browserButton} ${styles2.buttonRed}`} />
+        <div className={`${styles2.browserButton} ${styles2.buttonYellow}`} />
+        <div className={`${styles2.browserButton} ${styles2.buttonGreen}`} />
+      </div>
+      <div className={styles2.divBtnClose}>
+        <button className={styles2.closeButton} onClick={onClose}>
+          ×
+        </button>
+      </div>
     </div>
   </div>
 );
 
 const ProjectPreview = ({ project, onClose }) => (
   <div className={styles2.previewContainer}>
-    <BrowserChrome />
-    <div className={styles2.previewContent}>
-      <button className={styles2.closeButton} onClick={onClose}>
-        ×
-      </button>
-      <img
-        src={project.imageUrl}
-        alt={project.title}
-        className={styles2.previewImage}
-      />
+    <BrowserChrome onClose={onClose} />
+
+    <div className={styles2.previewDivsDivide}>
+      <div className={styles2.previewContent}>
+        <img
+          src={project.imageUrl}
+          alt={project.title}
+          className={styles2.previewImage}
+        />
+      </div>
       <div className={styles2.previewOverlay}>
         <h3 className={styles2.previewTitle}>{project.title}</h3>
         <p className={styles2.previewDescription}>{project.description}</p>
